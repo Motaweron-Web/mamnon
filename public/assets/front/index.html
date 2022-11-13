@@ -1,0 +1,1316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momnon</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- select2 -->
+    <link rel="stylesheet" href="css/select2.min.css">
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ((((((((((())))))))))) 
+        (((((((((((header))))))))))) 
+        ((((((((((())))))))))) 
+    -->
+    <header></header>
+    <!-- 
+        (((((((((((banner))))))))))) 
+    -->
+    <section class="filterPage">
+        <div class="container">
+            <div class="filterDiv">
+                <h3>
+                    فلترة
+                </h3>
+                <!-- checkedRadio -->
+                <div class="checkedRadio">
+                    <div class="storChecked">
+                        <input type="radio" name="storChecked" id="">
+                        <label for="">
+                            متاجر
+                        </label>
+                    </div>
+                    <div class="storChecked">
+                        <input type="radio" name="storChecked" id="">
+                        <label for="">
+                            منتجات
+                        </label>
+                    </div>
+
+                </div>
+                <!--  -->
+                <div class="checkToggleAll">
+                    <!-- checkToggle - 1 -->
+                    <div class="checkToggle">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="CheckedPages">
+                            <label class="form-check-label" for="CheckedPages">
+                                صفحات فقط
+                            </label>
+                        </div>
+                    </div>
+                    <!-- checkToggle - 2 -->
+                    <div class="checkToggle">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="CheckedPages1">
+                            <label class="form-check-label" for="CheckedPages1">
+                                    متاجر رياضية فقط
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterSelect">
+                    <!-- filterSelect1 -->
+                <div class="filterSelect1">
+                    <p>
+                        المحافظة:
+                    </p>
+                    <select name="" class="select" id="">
+                        <option value="" selected>بغداد</option>
+            
+                    </select>
+                </div>
+                <!-- filterSelect2 -->
+                <div class="filterSelect1">
+                    <p>
+                        الاقسام:
+                    </p>
+                    <select name="" class="select" id="">
+                        <option value="" selected>بغداد</option>
+            
+                    </select>
+                </div>
+                </div>
+                <!--  -->
+                <div class="button">
+                    <button>
+                        متابعة
+                    </button>
+                    <button class="deleteAll">
+                        الغاء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--  -->
+    <section class="banner">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <!-- slide1 -->
+              <div class="swiper-slide">
+                <img src="img/banner/88.webp" alt="">
+              </div>
+              <!-- slide2 -->
+              <div class="swiper-slide">
+                <img src="img/banner/88.webp" alt="">
+              </div>
+              <!-- slide3 -->
+              <div class="swiper-slide">
+                <img src="img/banner/88.webp" alt="">
+              </div>
+              <!--  -->
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+    <!-- filter World HWF -->
+    <div class="filter activeR">
+        <div class="container">
+            <!-- world filter -->
+        <div class="HWF">
+            <h3 class=" " data-filter="men">
+                 رجالي
+            </h3>
+            <h3 class=" " data-filter="woman">
+                 حريمي
+            </h3>
+            <h3 class="" data-filter="child">
+                  اطفالي
+            </h3>
+
+        </div>
+        </div>
+    </div>
+    <!-- WWff -->
+    <!-- <div class="WWff">
+        <div class="container">
+           <div class="allButton">
+             <button class="active" data-show="filterAll">
+                 الكل
+             </button>
+             <button data-show="men">
+                رجالي
+            </button>
+            <button data-show="woman">
+                نسائي
+            </button>
+            <button data-show="child">
+                اطفال
+            </button>
+            
+           </div>
+        </div>
+    </div> -->
+    <!--  -->
+<!-- AllFilter -->
+<!-- ((((((((())))))))) -->
+<section class="AllFilter">
+    <div class="container">
+        <!-- stor -->
+        <div id="stor">
+            <!-- all -->
+            <div class="products">
+                <div class="filterAll products">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            منتجات
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="products.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll men">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            منتجات
+                        </h3>
+                    </div>
+                    
+                    <!-- man -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="button text-center">
+                        <button>
+                            <a href="products.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll woman">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            منتجات
+                        </h3>
+                    </div>
+                    
+                    <!-- woman -->
+                    <div >
+                        <div class="row">
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="products.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll child">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            منتجات
+                        </h3>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="products.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="stor">
+                <div class="filterAll products">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            متاجر
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="button text-center">
+                        <button>
+                            <a href="stor.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll men">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            متاجر
+                        </h3>
+                    </div>
+                    
+                    <!-- man -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="button text-center">
+                        <button>
+                            <a href="stor.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll woman">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            متاجر
+                        </h3>
+                    </div>
+                    
+                    <!-- woman -->
+                    <div >
+                        <div class="row">
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="stor.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll child">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            متاجر
+                        </h3>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="stor.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+            <div class="page">
+                <div class="filterAll products">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            صفحات الكترونية (بيجات)
+                        </h3>
+                    </div>
+                    <div class="row">
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 1 men-->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/man/men.jpg" alt="men">
+                                </div>
+                                <p>
+                                    بسكوت
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 2 woman -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/woman/woman.jpg" alt="woman">
+                                </div>
+                                <p>
+                                    Merna
+                                </p>
+                            </div>
+                        </div>
+                        <!-- 3 child -->
+                        <div class="col-md-3 ">
+                            <div class="AllFilterCard">
+                                <div class="img">
+                                    <img src="img/child/child.jpg" alt="child">
+                                </div>
+                                <p>
+                                    توب كيدز
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="pages.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll men">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            صفحات الكترونية (بيجات)
+                        </h3>
+                    </div>
+                    
+                    <!-- man -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- 1 men-->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/man/men.jpg" alt="men">
+                                    </div>
+                                    <p>
+                                        بسكوت
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <div class="button text-center">
+                        <button>
+                            <a href="pages.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll woman">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            صفحات الكترونية (بيجات)
+                        </h3>
+                    </div>
+                    
+                    <!-- woman -->
+                    <div >
+                        <div class="row">
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- 2 woman -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/woman/woman.jpg" alt="woman">
+                                    </div>
+                                    <p>
+                                        Merna
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="pages.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+                <!--  -->
+                <div class="filterAll child">
+                    <div class="headTitle text-center" >
+                        <h3>
+                            صفحات الكترونية (بيجات)
+                        </h3>
+                    </div>
+                    
+                    <!--  -->
+                    <div class="">
+                        <div class="row">
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- 3 child -->
+                            <div class="col-md-3 ">
+                                <div class="AllFilterCard">
+                                    <div class="img">
+                                        <img src="img/child/child.jpg" alt="child">
+                                    </div>
+                                    <p>
+                                        توب كيدز
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="button text-center">
+                        <button>
+                            <a href="pages.html">
+                                اظهار المزيد   <i class="fa-regular fa-arrow-left"></i> 
+                            </a>
+                            
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+        </div>
+        <!--  -->
+
+    </div>
+</section>
+<!-- ((((((((((())))))))))) 
+        (((((((((((footer))))))))))) 
+        ((((((((((())))))))))) 
+    -->
+    <footer>
+
+    </footer>
+
+
+
+
+    <!-- file js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/select2.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+<script>
+    AOS.init();
+  </script>
+  <script>
+
+  </script>
+<script>
+    $("header").load("header.html")
+    $("footer").load("footer.html")
+</script>
+</html>

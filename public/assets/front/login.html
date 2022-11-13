@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momnon</title>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- aos -->
+    <link rel="stylesheet" href="css/aos.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- intlTelInput -->
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
+    <!-- style -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- ((((((((((())))))))))) 
+        (((((((((((header))))))))))) 
+        ((((((((((())))))))))) 
+    -->
+    <header></header>
+    <!-- banner2 -->
+    <section class="breadCrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ul class="breadcrumb">
+                    <li>
+                        <a href="index.html">
+                            <i class="fa-regular fa-angle-right"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+              </nav>
+        </div>
+    </section>
+    <section class="login">
+        <div class="container">
+            <!-- min-width 991px -->
+            <div class="min_width991">
+                <div class="row align-items-center justify-content-between">
+                    <!-- img gif -->
+                    <div class="col-lg-6 ">
+                        <div class="img">
+                            <img src="img/Authentication.gif" alt="login">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="loginForm">
+                            <!-- logo -->
+                        <div class="logo">
+                            <img src="img/logo.png" alt="logo">
+                        </div>
+                        <!-- text -->
+                        <div class="text">
+                            <p>
+                                مرحبا
+                            </p>
+                            <p>
+                                اهلا بك في ممنون
+                            </p>
+                        </div>
+                        <!-- input -->
+                        <div class="phone">
+                            <form>
+                                <input id="phone" class="NumberInput phone1" type="number" placeholder="ادخل رقم الهاتف">
+                                <div class="remember">
+                                    <input type="checkbox" name="remember" id="remember">
+                                    <label for="remember">
+                                        اوافق علي<span> سياسة الاستخدام </span>
+                                    </label>
+                                </div>
+                                <div class="button">
+                                    <button type="submit"> التسجيل </button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <!--  -->
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!--  -->
+<!-- max_width 991px -->
+<div class="fullPage">
+    <div class="container">
+        <a class="angle" href="index.html">
+            <i class="fa-regular fa-angle-right"></i>
+        </a>
+        <div class="max_width991">
+            <div class="loginForm">
+                <div class="row">
+                    <!-- logo -->
+                    <div class="col-12">
+                        <div class="logo">
+                            <img src="img/logo.png" alt="">
+                        </div>
+                    </div>
+                    <!-- text -->
+                    <div class="col-12">
+                        <div class="text">
+                            <p>
+                                مرحبا
+                            </p>
+                            <P>
+                                اهلا بك في ممنون
+                            </P>
+                        </div>
+                    </div>
+                    <!-- phone -->
+                    <div class="col-12">
+                        <div class="phone">
+                            <form>
+                                <input  class="NumberInput phone2" type="number" placeholder="ادخل رقم الهاتف">
+                                <div class="remember">
+                                    <input type="checkbox" name="remember" id="remember">
+                                    <label for="remember">
+                                        اوافق علي<span> سياسة الاستخدام </span>
+                                    </label>
+                                </div>
+                                <div class="button">
+                                    <button type="submit"> التسجيل </button>
+                                </div>
+                            </form>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ((((((((((())))))))))) 
+        (((((((((((footer))))))))))) 
+        ((((((((((())))))))))) 
+    -->
+    <footer>
+    </footer>
+
+
+
+
+    <!-- file js -->
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/intlTelInput.min.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+<script>
+    AOS.init();
+  </script>
+  <script>
+    var input = document.querySelector(".phone1");
+    window.intlTelInput(input, {
+      allowDropdown: true,
+      autoHideDialCode: true,
+      autoPlaceholder: "off",
+      dropdownContainer: document.body,
+    //   excludeCountries: ["IRQ"],
+    //   formatOnDisplay: false,
+      geoIpLookup: function(callback) {
+        $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+          var countryCode = (resp && resp.country) ? resp.country : "";
+          callback(countryCode);
+        });
+      },
+      // hiddenInput: "full_number",
+    //   initialCountry: "auto",
+      localizedCountries: { 'de': 'Deutschland' },
+      // nationalMode: false,
+    //   onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+      placeholderNumberType: "MOBILE",
+      preferredCountries: ['IQ'],
+      separateDialCode: true,
+      utilsScript: "./build/js/utils.js",
+    });
+  </script>
+
+<script>
+    $("header").load("header.html")
+    $("footer").load("footer.html")
+</script>
+</html>

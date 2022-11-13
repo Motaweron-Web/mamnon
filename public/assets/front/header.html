@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand">
+    <div class="container">
+        <!-- logo -->
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logo.png" alt="logo">
+      </a>
+      <!-- search -->
+      <form class="d-flex search mx-auto">
+        <input class="form-control me-2" type="search" placeholder="ابحث عن متجر" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit"><i class="fa-regular fa-magnifying-glass"></i></button>
+      </form>
+      <!-- links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html"> الرئيسية </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">
+            السلة
+          </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">
+                تسجيل الدخول 
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Profile.html">
+                الملف الشخصي
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Orders.html">
+                الطلبات
+            </a>
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </nav>
+  <!-- responsive navbar -->
+  
+  <nav class="navebar2">
+    <div class="container-fluid">
+        <!-- icon -->
+        <div class="icon">
+            <i class="fa-thin fa-bars-staggered"></i>
+          </div>
+          <!-- search -->
+          <div class="d-flex  mx-auto">
+            <div class="img">
+              <img src="img/logo2.png" alt="">
+            </div>
+          </div>
+          <!-- links -->
+          <div class="links">
+            <a class="nav-link" href="cart.html">
+                <i class="fa-thin fa-cart-shopping-fast"></i>
+            </a>
+            <a class="nav-link" href="#!">
+                <i class="fa-thin fa-moon"></i>
+            </a>
+            
+                <i class="fa-thin fa-filters nav-link" id="filterPagesAll"></i>
+            
+          </div>
+    </div>
+
+  </nav>
+  <!-- sild bar header -->
+  <div class="sildBar">
+    <div class="sildBarDetails">
+        <i class="fa-thin fa-xmark"></i>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="">
+            </div>
+            <ul class="links">
+                
+                <li class="nav-item">
+                    <a class="nav-links" href="login.html">
+                        تسجيل الدخول
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-links" href="Profile.html">
+                        الملف الشخصي
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-links" href="addStor.html">
+                        اضف متجرك
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-links" href="Orders.html">
+                        الطلبات
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-links" href="#!">
+                        مشاركة التطبيق
+                    </a>
+                  </li>
+                
+                
+              </ul>
+              <div class="div">
+                <p class="text-center">
+                    جميع حقوق الملكية الفكرية محفوظة لدي 
+                    <br>
+                    <i class="fa-regular fa-copyright"></i> الراشد العربية
+                </p>
+              </div>
+        </div>
+    </div>
+  </div>
+  <script>
+    $(".icon .fa-bars-staggered").click(function () {
+        $('.sildBar').animate({
+            right: 0,
+        })
+    })
+    $(".fa-xmark").click(function () {
+        $('.sildBar').animate({
+            right: '-100vw',
+        })
+    })
+    
+  </script>

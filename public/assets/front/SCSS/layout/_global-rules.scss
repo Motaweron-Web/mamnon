@@ -1,0 +1,62 @@
+
+:root{
+    --main: #1f232c;
+--mainDark: #0c0459;
+--hoverRed: #b69b28;
+--secondRedLight: #e0c13d;
+--secondRed: #e4c12b;
+--transition: .3s ease-in-out;
+--backgroundColor: rgba(51, 66, 181, 0.5);
+--inputHover: #428BCA;
+--box-shadow:  0 0 5px rgba(#1f232c, $alpha: .3);
+}
+
+
+@font-face {
+    font-family: Tajawal;
+    font-display: swap;
+    src: url(/webfonts/Tajawal-Regular.ttf);
+
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal';
+    direction: rtl;
+}
+body{
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    padding-top: 102.35px;
+    // height: 5000px;
+    @media(max-width:991px){
+        padding-top: 82px;
+        padding-bottom: 90px;
+    }
+}
+h1,h2,h3,h4,h5,h6 , a ,p{
+    margin: 0;
+}
+.row{
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    li{
+        list-style: none;
+    }
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+@media (max-width: 767px) {
+    .container,
+    .container-fluid {
+      padding: 0px 8px;
+    }
+  }
+

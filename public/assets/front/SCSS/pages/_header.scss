@@ -1,0 +1,260 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+    .navbar{
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px #1f232c56;
+        @media(max-width:991px){
+            display: none;
+        }
+        .navbar-brand{
+            width: 50px;
+            height: auto;
+            margin: 0;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            
+        }
+        .search{
+            width: 500px;
+            max-width: 100%;
+            position: relative;
+            @media(min-width:991px) and (max-width:1120px){
+                width: 400px;
+            }
+            .form-control{
+                border-radius: 15px;
+                border:1px solid  var(--hoverRed);
+                position: relative;
+                padding-right: 30px;
+                height: 48px;
+                &:focus{
+                    box-shadow: none;
+                }
+
+            }
+            .btn{
+                position: absolute;
+                right: 3px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                color: var(--hoverRed);
+                transition: var(--transition);
+                &:focus , &:hover{
+                    box-shadow: none;
+                    color: var(--secondRedLight);
+                }
+            }
+        }
+        .navbar-nav{
+            @media(max-width:991px){
+                display: none;
+            }
+            .nav-item{
+                padding-right: 10px;
+                // position: relative;
+                .nav-link{
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: var(--main);
+                    position: relative;
+                    transition: var(--transition);
+                    &::before{
+                        content: "";
+                        position: absolute;
+                        width: 0%;
+                        height: 2px;
+                        background-color: var(--secondRedLight);
+                        bottom: 0;
+                        right: 0;
+                        transition: var(--transition);
+
+                    }
+                    &:hover{
+                        color: var(--hoverRed);
+                        &::before{
+                            width: 90%;
+                        }
+                    }
+
+                }
+            }
+        }
+
+    }
+    .navebar2{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        display: none;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 0 10px #1f232c56;
+        padding: 15px 0px;
+        .img{
+            width: 100px;
+            height: auto;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+            @media(max-width:991px){
+                display: flex;
+            }
+            .container-fluid{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        .icon{
+            i{
+                font-size: 28px;
+                color: var(--main);
+                cursor: pointer;
+
+            }
+            
+        }
+        .search{
+            width: 500px;
+            max-width: 100%;
+            position: relative;
+            
+            .form-control{
+                border-radius: 15px;
+                border:1px solid  var(--hoverRed);
+                position: relative;
+                padding-right: 30px;
+                // height: 30px;
+                &:focus{
+                    box-shadow: none;
+                }
+
+            }
+            .btn{
+                position: absolute;
+                right: 3px;
+                top: 50%;
+                transform: translateY(-50%);
+                background-color: transparent;
+                border: none;
+                font-size: 18px;
+                color: var(--hoverRed);
+                transition: var(--transition);
+                &:focus , &:hover{
+                    box-shadow: none;
+                    color: var(--secondRedLight);
+                }
+            }
+        }
+        .links{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .nav-link{
+                font-size: 24px;
+                color: var(--main);
+                transition: var(--transition);
+                &:hover{
+                    color: var(--hoverRed);
+                }
+            }
+        }
+    }
+    .sildBar{
+        position: fixed;
+        top: 0;
+        right: -100vw;
+        height: 100vh;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.144);
+        // display: none;
+        z-index: 1001;
+        .sildBarDetails{
+            
+            padding-right: 50PX;
+            padding-top: 30px;
+            background-color: #fff;
+            opacity: .9;
+            height: 100%;
+            width: 70vw;
+            position: relative;
+            @media(max-width:420px){
+                padding-right: 10PX
+            }
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            .fa-xmark{
+                font-size: 30px;
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                left: 15px;
+                color: var(--main);
+                &:hover{
+                    color: var(--hoverRed);
+                }
+
+            }
+        }
+        .logo{
+            width: 110px;
+            height: auto;
+            margin-right: 70px;
+            margin-bottom: 50px;
+            max-width: 100%;
+            @media(max-width:420px){
+                width: 80px;
+                margin-right: 20px;
+            }
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .links{
+            .nav-item{
+                padding-bottom: 30px;
+                .nav-links{
+                    color: var(--main);
+                    font-size: 22px;
+                    font-weight: 500;
+                    @media(max-width:420px){
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+            
+        }
+        .div{
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            p{
+                font-size: 18px;
+                color: rgb(129, 129, 129);
+                width: 100%;
+                max-width: 100%;
+                @media(max-width:420px){
+                    font-size: 14px;
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,16 @@
+
+// global-rules
+@use '../SCSS/layout/global-rules';
+
+
+// pages 
+@use '../SCSS/pages/header';//header
+@use "../SCSS/pages/home" ;//home
+@use '../SCSS/pages/footer';//footer
+@use '../SCSS/pages/login'; //login
+@use '../SCSS/pages/Profile';//Profile
+@use '../SCSS//pages/addStor';//addStor
+@use '../SCSS/pages/cart';//cart
+@use '../SCSS//pages/Orders' ;//Orders
+@use '../SCSS/pages/filter';//filter
+@use '../SCSS/pages/products'; //products page

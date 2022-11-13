@@ -1,0 +1,29 @@
+footer{
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(62, 62, 62, 0.388);
+    margin-top: 3vh;
+    display: none;
+    @media(max-width:991px){
+        display: block;
+    }
+    a{
+        font-size: 30px;
+        padding: 20px 0px;
+        i{
+            font-size: 30px;
+            color: var(--main);
+            transition: var(--transition);
+            padding: 10px;
+            &:hover , &:focus , &.active{
+                background-color: var(--hoverRed);
+                transform: translateY(-5px);
+            border-radius: 50%;
+            color: #fff;
+            }
+        }
+    }
+}

@@ -29,47 +29,25 @@ class AuthController extends Controller
 
     public function dologin(Request $request)
     {
-        $phone_number = $request->phone_code.$request->phone;
+        return $this->user->do_login();
+    }
 
-        $data_user = $this->user->all_users()->where('phoneNumber','=',$request->phone_code.$request->phone)->limit(1)->documents();
-//dd($data_user->rows()[0]);
+    public function profile()
+    {
+        $data['user_data'] = $this->user->find(Auth::user()->firestore_user_id);
+//        dd($data['user_data']);
+        return view('front.auth.profile',$data);
+    }
 
-        //--------------------------------------
-        if (!empty($data_user->rows()[0])) {
-
-            if ($data_user->rows()[0]->data()['status'] == 0) {
-                return $this->final_response(null, 'sorry, this user is blocked', 409, 'no');
-            }
-            $user = User::updateOrCreate(
-                ['firestore_user_id' => $data_user->rows()[0]->id(), 'phoneNumber' => $phone_number],
-                $data_user->rows()[0]->data()
-            );
-            Auth::login($user);
+    public function update_profile(Request $request)
+    {
+        $data['user_data'] = $this->user->update_profile($request);
+        if($data['user_data']) {
+            toastr()->success('Data has been Updated successfully!');
+            return back();
         }
+        toastr()->error('An error has occurred please try again.');
 
-
-        if (auth()->check()) {
-            return response()->json(['status'=>'login','url'=>'/'],200);
-        } else {
-            $data =[
-                "avatar" => "",
-                "createdDate" =>  new Timestamp(new DateTime()),
-                "email" => "",
-                "firstName" =>"",
-                "language" => app()->getLocale(),
-                "lastName"=> "",
-                "phoneNumber" => $request->phone_code.$request->phone,
-                "status" =>1,
-                "userRole" => "Mandoob",
-                "username" => "Mandoob_l7zv1172"
-            ];
-            $user_id = $this->user->create($data);
-            $user = User::updateOrCreate(
-                ['firestore_user_id' => $user_id, 'phoneNumber' => $data['phoneNumber']],
-                $data
-            );
-            Auth::login($user);
-            return response()->json(['url'=>'/','status'=>'register'],200);
-        }
+        return back();
     }
 }

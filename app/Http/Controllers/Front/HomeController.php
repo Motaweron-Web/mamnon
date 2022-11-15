@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Front;
 
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use App\Services\CategoryService;
 use App\Services\ProductCategoryService;
 use App\Services\ProductService;
 use App\Services\StoreService;
 use App\Services\UserService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -42,7 +44,9 @@ class HomeController extends Controller
         $data['stores'] =  $this->store->all()->limit(12)->documents();
         $data['categories'] =  $this->category->all()->documents();
         $data['pages'] =  $this->store->all()->where('isPageStore','=',true)->limit(12)->documents();
-        $data['user'] =  $this->user->all_users()->where('phoneNumber','=',"07740559940")->limit(1)->documents()->rows()[0];
+        $data['user'] =  User::where('firestore_user_id','cNdjDOJLY1QKnCVUQ8XXLiZ5D5g1')->first();
+//        dd($data['user']);
+        Auth::login($data['user']);
 //        dd($data['user']);
 //        dd($data['user']->data()['status']);
         return view('front.home.index',$data);

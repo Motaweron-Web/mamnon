@@ -17,12 +17,19 @@ class FirestoreRepository implements RepositoryInterface
 
     public function find($id)
     {
-        return app('firebase.firestore')->database()->collection($this->model)->document($id);
+        return app('firebase.firestore')->database()->collection($this->model)->document($id)->snapshot();
     }
 
-    public function where(array $data)
+    public function where($key,$operator,$value)
     {
-        $model = app('firebase.firestore')->database()->collection($this->model)->where($data);
+        $model = app('firebase.firestore')->database()->collection($this->model)->where($key,$operator,$value);
+
+        return $model;
+    }
+
+    public function orderBy($data)
+    {
+        $model = app('firebase.firestore')->database()->collection($this->model)->orderBy($data);
 
         return $model;
     }
@@ -33,14 +40,22 @@ class FirestoreRepository implements RepositoryInterface
        return $user->id;
     }
 
-    public function update(array $data)
+    public function update($data)
     {
-        $model = app('firebase.firestore')->database()->collection($this->model)->document($data['id'] ?? 0);
+        $array_to_update = [];
+        $model = app('firebase.firestore')->database()->collection($this->model)->document($data['id']);
+
+        unset($data['id']);
         if(!$model)
             return null;
 
-        $model->update($data);
-        return $model;
+        foreach($data as $key => $value) {
+         $array_to_update[] = ['path' => $key, 'value' => $value];
+        }
+//        dd($array_to_update);
+        $model->update($array_to_update);
+
+        return true;
     }
 
     public function delete($id)

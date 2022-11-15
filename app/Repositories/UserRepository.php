@@ -4,7 +4,7 @@ namespace App\Repositories;
 
 class UserRepository extends FirestoreRepository
 {
-    public function __construct($user ="admin_user")
+    public function __construct($user ="customerUser")
     {
         $this->setModel($user);
     }

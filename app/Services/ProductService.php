@@ -21,4 +21,8 @@ class ProductService
         return $this->product->all();
     }
 
+    public function find($id)
+    {
+        return $this->product->find($id);
+    }
 }

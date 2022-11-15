@@ -9,6 +9,11 @@
 <link rel="stylesheet" href="{{asset('/assets/front/')}}/css/swiper-bundle.min.css">
 <!-- select2 -->
 <link rel="stylesheet" href="{{asset('/assets/front/')}}/css/select2.min.css">
+<link rel="stylesheet" href="{{asset('/assets/front/')}}/css/dropify.min.css">
+
 <!-- style -->
 <link rel="stylesheet" href="{{asset('/assets/front/')}}/css/style.css">
 <script src="{{asset('/assets/front/')}}/js/jquery.min.js"></script>
+<script src="{{ asset('js/app.js') }}" defer></script>
+
+<link href="{{ asset('css/app.css') }}" rel="stylesheet">

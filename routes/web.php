@@ -1,9 +1,12 @@
 <?php
 
+
 use App\Http\Controllers\Front\AuthController;
 use App\Http\Controllers\Front\CartController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Front\StoreController;
 use App\Http\Controllers\Front\OrderController;
+use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,9 +20,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/change-language/{locale}', function ($locale) {
+    app()->setLocale($locale);
+    session()->put('lang', $locale);
+    return back();
+});
+
 Route::get('/',HomeController::class);
+
+//products
 Route::get('/all-products',[HomeController::class,'all_products']);
-Route::get('/all-stores',[HomeController::class,'all_stores']);
+
+// stores
+Route::get('/all-stores',[StoreController::class,'index']);
+Route::get('/create-store',[StoreController::class,'create']);
+Route::post('/create-store',[HomeController::class,'store'])->name('store');
+
+
+
 Route::get('/login',[AuthController::class,'login'])->name('login');
 Route::post('/login',[AuthController::class,'dologin'])->name('do_login');
 Route::get('/profile',[AuthController::class,'profile']);
@@ -33,7 +52,7 @@ Auth::routes(['login' => false]);
 Route::get('/orders',OrderController::class);
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 /* cart */

@@ -19,6 +19,7 @@ class AuthController extends Controller
      */
     public function __construct(UserService $user)
     {
+        $this->middleware('auth')->except('login','dologin');
         $this->user = $user;
     }
 
@@ -35,7 +36,6 @@ class AuthController extends Controller
     public function profile()
     {
         $data['user_data'] = $this->user->find(Auth::user()->firestore_user_id);
-//        dd($data['user_data']);
         return view('front.auth.profile',$data);
     }
 

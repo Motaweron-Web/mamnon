@@ -300,7 +300,6 @@
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script src="{{asset('/assets/front/')}}/js/dropify.min.js"></script>
     <script src="{{asset('/assets/front/')}}/js/intlTelInput.min.js"></script>
     <script src="{{asset('/assets/front/')}}/js/utils.js"></script>
@@ -308,21 +307,6 @@
 @section('js')
 
     <script>
-
-        var myObject = new Vue({
-            el: '#app',
-
-            data: [],
-            stores: [],
-
-
-
-        })
-
-
-
-
-
     </script>
 @endsection
 

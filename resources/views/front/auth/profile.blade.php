@@ -82,6 +82,7 @@
                             </select>
                         </div>
                     </div>
+
                     <!-- button -->
                     <div class="button">
                         <button type="submit">
@@ -159,6 +160,15 @@
                                 </select>
                             </div>
                         </div>
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    اللغة
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{{url('/change-language/ar')}}">العربية</a>
+                                    <a class="dropdown-item" href="{{url('/change-language/ar')}}">الانجليزية</a>
+                                </div>
+                            </div>
                         <!-- button -->
                         <div class="col-12">
                             <div class="button">

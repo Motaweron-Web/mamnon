@@ -45,10 +45,8 @@ class HomeController extends Controller
         $data['categories'] =  $this->category->all()->documents();
         $data['pages'] =  $this->store->all()->where('isPageStore','=',true)->limit(12)->documents();
         $data['user'] =  User::where('firestore_user_id','cNdjDOJLY1QKnCVUQ8XXLiZ5D5g1')->first();
-//        dd($data['user']);
-        Auth::login($data['user']);
-//        dd($data['user']);
-//        dd($data['user']->data()['status']);
+//        Auth::login($data['user']);
+
         return view('front.home.index',$data);
     }
 
@@ -59,11 +57,5 @@ class HomeController extends Controller
         return view('front.home.all-products',$data);
     }
 
-    public function all_stores(){
-        $data['stores'] =  $this->store->all()->documents();
-        $data['categories'] =  $this->category->all()->documents();
-        $data['products_categories'] =  $this->product_category->all()->documents();
 
-        return view('front.home.all-stores',$data);
-    }
 }

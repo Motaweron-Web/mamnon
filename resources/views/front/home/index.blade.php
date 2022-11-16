@@ -51,7 +51,10 @@
                                         </div>
                                         <p>
                                             {{$product->data()['name'] ?? "اسم المنتج"}}
+                                            <a class="btn btn-info add-cart" href="#!" product-id="{{ $product->id() }}" ><i class="{{ get_one_cart($product->id())  != null ? 'active' : ''  }} far fa-shopping-cart"></i>add to cart</a>
+
                                         </p>
+
                                     </div>
                                 </div>
                             @empty
@@ -165,6 +168,7 @@
 
         </div>
     </section>
+    @include('front.general_components.ajax-code')
 
 @endsection
 @section('js')

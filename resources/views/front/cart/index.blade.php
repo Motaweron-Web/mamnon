@@ -17,125 +17,52 @@
     </section>
     <!-- profile -->
     <!--  Cart  -->
-    <section class="cartPage">
-        <div class="container">
-            <div class="row">
-{{dd($cartCollections)}}
-                @if(count($cartCollections) > 0)
-                    <div class="col-lg-8 col-md-12 p-1">
 
-                        @foreach($cartCollections as $cartCollection)
-                            <div class="cartProduct">
-                                <div class="row align-items-center">
-
-                                    <div class="col-4 p-1"><img
-                                            src="{{ $cartCollection['attributes']['image'] }}"></div>
-
-                                    <div class="col-8 p-1">
-                                        <div class="CartInfo">
-                                            <p class="unit-name"> {{ trans('web_lang.product name') }} : <a
-                                                    href="{{ url('product-details').'?product_id='.$cartCollection['id'] }}">{{ $cartCollection['name'] }}</a>
-                                            </p>
-                                            <p class="unit-amount"> {{ trans('web_lang.unit price') }} :
-                                                <span>{{ $cartCollection['price'] }} {{trans('web_lang.ID')}}</span>
-                                            </p>
-{{--                                            <p class="unit-amount"> {{ trans('web_lang.the shop') }} :--}}
-{{--                                                <span>{{ @\App\Models\Product::find($cartCollection['id'])->user_rl->name }}</span>--}}
-{{--                                            </p>--}}
-                                            <div class="d-flex justify-content-between"
-                                                 style="align-items: flex-end;">
-                                                <div class="input-counter">
-                                                    <input style="max-width: 130px;height: 40px;"
-                                                           product-id="{{ $cartCollection['id'] }}"
-                                                           class="cart_update QtyItem" min="1"
-                                                           id="{{ $cartCollection['id'] }}" max=""
-                                                           value="{{ $cartCollection['quantity'] }}" type="number">
-                                                </div>
-                                                <p class="total-amount"> {{ trans('web_lang.Total') }}:
-                                                    <span>{{ cart_get_total() }} {{trans('web_lang.ID')}}</span></p>
-                                            </div>
-                                        </div>
-                                        <div class="CartControl">
-                                            <a class="trash"
-                                               href="{{ url('delete_cart?product_id='.$cartCollection['id']) }}"><i
-                                                    class="fal fa-times"></i></a>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-
-                    <div class="col-lg-4 col-md-12 p-1">
-                        @include('front.cart.components.total_cart', ['type' => 'cart'])
-                    </div>
-                @else
-{{--                    @include('website.inc.NotFound')--}}
-                @endif
-
-            </div>
-        </div>
-    </section>
     <section class="cart">
         <div class="container">
             <!-- min_width991 -->
             <div class="min_width991">
                 <div class="container">
                     <div class="row">
+                        @forelse($cartCollections as $cartCollection)
                         <div class="col-12">
                             <div class="cartDerails">
                                 <!-- img -->
                                 <div class="img">
-                                    <img src="img/man/men.jpg" alt="">
+                                    <img src="{{$cartCollection['attributes']['image']}}" alt="">
                                 </div>
                                 <!-- cartInfo -->
                                 <div class="cartInfo">
                                     <p>
-                                        ولادي اطفال
+                                        {{$cartCollection['name']}}
                                     </p>
                                     <p>
-                                        <span>+4</span>
-                                        <span>1600</span>
+                                    <div class="input-counter">
+                                        <input style="max-width: 130px;height: 40px;"
+                                               product-id="{{ $cartCollection['id'] }}"
+                                               class="cart_update QtyItem" min="1"
+                                               id="{{ $cartCollection['id'] }}" max=""
+                                               value="{{ $cartCollection['quantity'] }}" type="number">
+                                    </div>
+                                        <span>x {{ $cartCollection['quantity'] }}</span>
+                                        <span>{{ $cartCollection['quantity'] }} x {{ $cartCollection['price'] }}</span>
                                         <span>IQD</span>
                                     </p>
                                 </div>
                                 <!-- delete -->
                                 <div class="delete">
-                                    <button class="btn" type="submit">
+                                    <a class="trash"
+                                       href="{{ url('delete_cart?product_id='.$cartCollection['id']) }}">
                                         <i class="fa-solid fa-trash"></i>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <!--  -->
                         <hr>
-                        <div class="col-12">
-                            <div class="cartDerails">
-                                <!-- img -->
-                                <div class="img">
-                                    <img src="img/man/men.jpg" alt="">
-                                </div>
-                                <!-- cartInfo -->
-                                <div class="cartInfo">
-                                    <p>
-                                        ولادي اطفال
-                                    </p>
-                                    <p>
-                                        <span>+4</span>
-                                        <span>1600</span>
-                                        <span>IQD</span>
-                                    </p>
-                                </div>
-                                <!-- delete -->
-                                <div class="delete">
-                                    <button class="btn" type="submit">
-                                        <i class="fa-solid fa-trash"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-
+                        @empty
+                            <div class="alert alert-info">لا يوجد منتجات مضافة</div>
+                        @endforelse
 
                     </div>
                     <!-- buttonBuy +price -->
@@ -147,7 +74,7 @@
                         <!-- price -->
                         <div class="price">
                             <p>المجموع</p>
-                            <p>16000</p>
+                            <p>{{ cart_get_total() }}</p>
                         </div>
 
                     </div>
@@ -159,8 +86,7 @@
                     <div class="container">
                         <div class="angle">
                             <div class="angle2">
-
-                                <a class="" href="index.html">
+                                <a class="" href="{{url('/')}}">
                                     <i class="fa-regular fa-angle-right"></i>
                                 </a>
                                 <h3>
@@ -169,58 +95,46 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-12">
-                                <div class="cartDerails">
-                                    <!-- img -->
-                                    <div class="img">
-                                        <img src="img/man/men.jpg" alt="">
-                                    </div>
-                                    <!-- cartInfo -->
-                                    <div class="cartInfo">
-                                        <p>
-                                            ولادي اطفال
-                                        </p>
-                                        <p>
-                                            <span>+4</span>
-                                            <span>1600</span>
+                            @forelse($cartCollections as $cartCollection)
+                                <div class="col-12">
+                                    <div class="cartDerails">
+                                        <!-- img -->
+                                        <div class="img">
+                                            <img src="{{$cartCollection['attributes']['image']}}" alt="">
+                                        </div>
+                                        <!-- cartInfo -->
+                                        <div class="cartInfo">
+                                            <p>
+                                                {{$cartCollection['name']}}
+                                            </p>
+                                            <p>
+                                            <div class="">
+                                                <input style="max-width: 130px;height: 40px;"
+                                                       product-id="{{ $cartCollection['id'] }}"
+                                                       class="cart_update QtyItem" min="1"
+                                                       id="{{ $cartCollection['id'] }}" max=""
+                                                       value="{{ $cartCollection['quantity'] }}" type="number">
+                                            </div>
+                                            <span>x {{ $cartCollection['quantity'] }}</span>
+                                            <span>{{ $cartCollection['quantity'] }} x {{ $cartCollection['price'] }}</span>
                                             <span>IQD</span>
-                                        </p>
-                                    </div>
-                                    <!-- delete -->
-                                    <div class="delete">
-                                        <button class="btn" type="submit">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
+                                            </p>
+                                        </div>
+                                        <!-- delete -->
+                                        <div class="delete">
+                                            <a class="btn trash"
+                                               href="{{ url('delete_cart?product_id='.$cartCollection['id']) }}">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!--  -->
-                            <hr>
-                            <div class="col-12">
-                                <div class="cartDerails">
-                                    <!-- img -->
-                                    <div class="img">
-                                        <img src="img/man/men.jpg" alt="">
-                                    </div>
-                                    <!-- cartInfo -->
-                                    <div class="cartInfo">
-                                        <p>
-                                            ولادي اطفال
-                                        </p>
-                                        <p>
-                                            <span>+4</span>
-                                            <span>1600</span>
-                                            <span>IQD</span>
-                                        </p>
-                                    </div>
-                                    <!-- delete -->
-                                    <div class="delete">
-                                        <button class="btn" type="submit">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                                <!--  -->
+                                <hr>
+                            @empty
+                                <div class="alert alert-info">لا يوجد منتجات مضافة</div>
+                            @endforelse
+
 
 
                         </div>
@@ -233,7 +147,7 @@
                             <!-- price -->
                             <div class="price">
                                 <p>المجموع</p>
-                                <p>16000</p>
+                                <p>{{ cart_get_total() }}</p>
                             </div>
 
                         </div>

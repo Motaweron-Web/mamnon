@@ -1,11 +1,9 @@
-@push('website_js')
     <script>
 
         let login_first = '{{trans('web_lang.login_first')}}';
 
         /* add */
         $(document).on('click', '.add-cart', function () {
-            alert('ddd');
             let product_id = $(this).attr('product-id');
             let quantity = $("#quantity").val();
             if (!quantity) {
@@ -40,13 +38,14 @@
                     console.log(data);
                 },
                 error: function (error, exception) {
-
+                    console.log(error);
                 }
             }); //end ajax
         }
         /* add */
 
         $(document).on('change', '.cart_update', function () {
+
             let url = "{{ route('update_cart') }}";
             let product_id = $(this).attr("product-id");
             let qty = $(this).val();
@@ -57,7 +56,6 @@
                 data: {"_token": "{{ csrf_token() }}", "product_id": product_id, 'qty': qty},
                 type: 'post',
                 beforeSend: function () {
-
                 },
                 success: function (data) {
                     console.log(data);
@@ -155,4 +153,3 @@
 
 
     </script>
-@endpush

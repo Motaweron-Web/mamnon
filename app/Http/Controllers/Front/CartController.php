@@ -80,10 +80,9 @@ class CartController extends Controller
         $product_id = $request->product_id;
         $quantity = $request->quantity;
         $product = $this->product->find($product_id);
-//        dd($product_id);
         Cart::add(array(
             'id' => $product_id,
-            'name' => $product->data()['name'],
+            'name' => $product->data()['name']?$product->data()['name']: "اسم المنتج",
             'price' => (int)$product->data()['price'],
             'quantity' => (int)$quantity,
             'attributes' => array(

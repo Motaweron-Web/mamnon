@@ -14,6 +14,10 @@
 <!-- style -->
 <link rel="stylesheet" href="{{asset('/assets/front/')}}/css/style.css">
 <script src="{{asset('/assets/front/')}}/js/jquery.min.js"></script>
-<script src="{{ asset('js/app.js') }}" defer></script>
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.2/js/toastr.min.js"></script>
+
+    <script src="{{ asset('js/app.js') }}" defer></script>
 
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">

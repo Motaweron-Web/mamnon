@@ -16,13 +16,12 @@ class OrderController extends Controller
     public function __construct(OrderService $order)
     {
         $this->order = $order;
+        $this->middleware('auth');
     }
 
     public function __invoke()
     {
         $data['orders'] =  $this->order->get_orders();
-
-//        dd($data['orders']);
 
         return view('front.orders.index',$data);
     }

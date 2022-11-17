@@ -28,6 +28,7 @@ class StoreController extends Controller
         $this->category = $category;
         $this->governorate = $governorate;
         $this->product_category = $product_category;
+        $this->middleware('auth')->only('store');
     }
 
     public function index(){

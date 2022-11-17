@@ -36,8 +36,12 @@ class FirestoreRepository implements RepositoryInterface
 
     public function create(array $data)
     {
-        $user = app('firebase.firestore')->database()->collection($this->model)->newDocument()->set($data);
-       return $user->id;
+        $document_id = app('firebase.firestore')->database()->collection($this->model)->newDocument();
+        $addedDoc = $document_id->set($data);
+        if($addedDoc){
+            return $document_id->id();
+        }
+       return 0;
     }
 
     public function update($data)

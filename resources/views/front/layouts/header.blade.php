@@ -5,8 +5,8 @@
             <img src="{{asset('/assets/front/')}}/img/logo.png" alt="logo">
         </a>
         <!-- search -->
-        <form class="d-flex search mx-auto">
-            <input class="form-control me-2" type="search" placeholder="ابحث عن متجر" aria-label="Search">
+        <form class="d-flex search mx-auto" action="{{url('/search')}}" method="get">
+            <input class="form-control me-2" type="search" name="search_key" placeholder="ابحث عن متجر" aria-label="Search">
             <button class="btn btn-outline-success" type="submit"><i class="fa-regular fa-magnifying-glass"></i>
             </button>
         </form>

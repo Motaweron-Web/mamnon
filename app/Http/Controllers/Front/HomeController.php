@@ -44,7 +44,7 @@ class HomeController extends Controller
         $data['stores'] =  $this->store->all()->limit(12)->documents();
         $data['categories'] =  $this->category->all()->documents();
         $data['pages'] =  $this->store->all()->where('isPageStore','=',true)->limit(12)->documents();
-        $data['user'] =  User::where('firestore_user_id','cNdjDOJLY1QKnCVUQ8XXLiZ5D5g1')->first();
+//        $data['user'] =  User::where('firestore_user_id','cNdjDOJLY1QKnCVUQ8XXLiZ5D5g1')->first();
 //        Auth::login($data['user']);
 
         return view('front.home.index',$data);
@@ -57,5 +57,25 @@ class HomeController extends Controller
         return view('front.home.all-products',$data);
     }
 
+    public function pages(){
+        $data['pages'] =  $this->store->all()->where('isPageStore','=',true)->documents();
+        $data['categories'] =  $this->category->all()->documents();
+        $data['products_categories'] =  $this->product_category->all()->documents();
+
+        return view('front.home.all-pages',$data);
+    }
+
+    public function search(Request $request)
+    {
+        $keyword = $request->search_key;
+        $data['stores'] =  $this->store->all()->orderBy('name','asc')
+            ->startAt([$keyword])->documents();
+//            ->endAt([$keyword."\uf8ff"])->documents();
+//        dd($data['stores']);
+        $data['categories'] =  $this->category->all()->documents();
+        $data['products_categories'] =  $this->product_category->all()->documents();
+
+        return view('front.home.all-stores',$data);
+    }
 
 }

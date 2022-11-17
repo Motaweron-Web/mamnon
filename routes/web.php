@@ -31,11 +31,12 @@ Route::get('/',HomeController::class);
 
 //products
 Route::get('/all-products',[HomeController::class,'all_products']);
+Route::get('/search',[HomeController::class,'search']);
 
 // stores
 Route::get('/all-stores',[StoreController::class,'index']);
 Route::get('/create-store',[StoreController::class,'create']);
-Route::post('/create-store',[HomeController::class,'store'])->name('store');
+Route::post('/create-store',[StoreController::class,'store'])->name('store');
 
 
 
@@ -50,6 +51,10 @@ Auth::routes(['login' => false]);
 
 
 Route::get('/orders',OrderController::class);
+
+
+
+Route::get('/pages',[HomeController::class,'pages']);
 
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

@@ -30,7 +30,7 @@ class AuthController extends Controller
 
     public function dologin(Request $request)
     {
-        return $this->user->do_login();
+        return $this->user->do_login($request);
     }
 
     public function profile()

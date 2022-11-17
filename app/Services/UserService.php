@@ -8,6 +8,7 @@ use Google\Cloud\Core\Timestamp;
 use Illuminate\Auth\Authenticatable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use DateTime;
 
 class UserService
 {
@@ -42,17 +43,17 @@ class UserService
         return $this->user->create($array);
     }
 
-    public function do_login()
+    public function do_login($request)
     {
         $phone_number = $request->phone_code.$request->phone;
 
-        $data_user = $this->user->all_users()->where('phoneNumber','=',$request->phone_code.$request->phone)->limit(1)->documents();
+        $data_user = $this->all_users()->where('phoneNumber','=',$request->phone_code.$request->phone)->limit(1)->documents();
 
         //--------------------------------------
         if (!empty($data_user->rows()[0])) {
 
             if ($data_user->rows()[0]->data()['status'] == 0) {
-                return $this->final_response(null, 'sorry, this user is blocked', 409, 'no');
+                return response()->json(['status'=>409,'url'=>'/'],409);
             }
             $user = User::updateOrCreate(
                 ['firestore_user_id' => $data_user->rows()[0]->id(), 'phoneNumber' => $phone_number],
@@ -63,7 +64,7 @@ class UserService
 
 
         if (auth()->check()) {
-            return response()->json(['status'=>'login','url'=>'/'],200);
+            return response()->json(['status'=>'login','url'=>url('/')],200);
         } else {
             $data =[
                 "avatar" => "",
@@ -86,7 +87,7 @@ class UserService
                 $data
             );
             Auth::login($user);
-            return response()->json(['url'=>'/','status'=>'register'],200);
+            return response()->json(['url'=>url('/'),'status'=>'register'],200);
         }
 
     }
@@ -121,7 +122,7 @@ class UserService
         ];
         $user = User::find(Auth::user()->id);
         $this->user->update($data);
-        $user->avatar = $link_avatar? $link_avatar : $user->data()['avatar'];
+        $user->avatar = $link_avatar? $link_avatar : $data['avatar'];
         $user->firstName = $request->firstName;
         $user->lastName = $request->lastName;
         $user->save();
